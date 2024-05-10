@@ -15,7 +15,7 @@ You can install the development version of idpalette from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("geryan/idpalette")
+devtools::install_github("idem-lab/idpalette")
 ```
 
 ## Main colours
