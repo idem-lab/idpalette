@@ -19,6 +19,9 @@ Base colour palettes for IDEM, IDDU, and ACEFA
 \code{"idem"}, \code{"iddu"}, and \code{"acefa"} return palettes for all colours in logos.
 \code{"..._official"} palettes return only the four-colour palettes per the style-
 guide from the designer.
+
+NB: These 'non-official' colours are estimated by a colour dropper thing
+Gerry found on the internet and may or may not be exacty correct.
 }
 \examples{
 

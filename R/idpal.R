@@ -9,6 +9,9 @@
 #' `"..._official"` palettes return only the four-colour palettes per the style-
 #' guide from the designer.
 #'
+#' NB: These 'non-official' colours are estimated by a colour dropper thing
+#' Gerry found on the internet and may or may not be exacty correct.
+#'
 #'
 #' @export
 #'
