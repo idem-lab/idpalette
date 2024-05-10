@@ -1,0 +1,99 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.height = 1,
+  out.width = "100%"
+)
+```
+
+# idpalette
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+COLOURS FOR EVERYONE *in IDEM, IDDU, ACEFA*
+
+## Installation
+
+You can install the development version of idpalette from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("geryan/idpalette")
+```
+
+## Main colours
+
+### IDEM
+```{r}
+library(idpalette)
+idpalette("idem")
+```
+```{r}
+idpalette("idem_official")
+```
+
+### IDDU
+```{r}
+idpalette("iddu")
+```
+
+```{r}
+idpalette("iddu_official")
+```
+
+### ACEFA
+```{r}
+idpalette("acefa")
+```
+
+```{r}
+idpalette("acefa_official")
+```
+
+## Your colours your way
+
+```{r}
+idpalette("iddu", 20)
+```
+
+```{r}
+idpalette("acefa", 2)
+```
+
+## Have a go ya mug
+
+```{r, fig.height= 4}
+library(ggplot2)
+
+ggplot(
+  faithfuld,
+   aes(waiting, eruptions)
+) +
+ geom_raster(
+   aes(fill = density)
+ ) +
+  scale_fill_gradientn(
+    colours = idpalette("iddu", 100)
+  )
+```
+```{r  fig.height= 4}
+ggplot(mpg) +
+  geom_bar(
+    aes(
+      x = trans,
+      fill = class
+    )
+  ) +
+  scale_fill_manual(values = idpalette("idem")) +
+  theme_bw()
+```
+
