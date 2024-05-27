@@ -2,7 +2,7 @@
 #' @description
 #' An alias for `idpalette(p = "idem", n)`
 #'
-#' @param n
+#' @param n `numeric`. How many colours?
 #'
 #' @return `character` of length `n`
 #' @export

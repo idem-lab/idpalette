@@ -7,7 +7,7 @@
 idem(n)
 }
 \arguments{
-\item{n}{}
+\item{n}{\code{numeric}. How many colours?}
 }
 \value{
 \code{character} of length \code{n}
