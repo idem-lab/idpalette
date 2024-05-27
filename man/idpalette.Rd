@@ -2,7 +2,7 @@
 % Please edit documentation in R/idpalette.R
 \name{idpalette}
 \alias{idpalette}
-\title{Create colour palettes based on IDEM, IDDU, and ACEFA colours.}
+\title{Create colour palettes based on IDEM, IDDU, and ACEFA colours}
 \usage{
 idpalette(p, n = NULL)
 }
@@ -15,7 +15,7 @@ idpalette(p, n = NULL)
 \code{character} of hex colours length \code{n}
 }
 \description{
-Create colour palettes based on IDEM, IDDU, and ACEFA colours.
+Create colour palettes based on IDEM, IDDU, and ACEFA colours
 }
 \examples{
 

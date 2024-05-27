@@ -1,4 +1,4 @@
-#' Create colour palettes based on IDEM, IDDU, and ACEFA colours.
+#' Create colour palettes based on IDEM, IDDU, and ACEFA colours
 #'
 #' @param p `character`. Which palette? See `?idpal` for details.
 #' @param n `numeric`. How many colours
