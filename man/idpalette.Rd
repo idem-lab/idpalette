@@ -2,7 +2,7 @@
 % Please edit documentation in R/idpalette.R
 \name{idpalette}
 \alias{idpalette}
-\title{Create colour palettes based on IDEM, IDDU, and ACEFA colours}
+\title{ID Palette}
 \usage{
 idpalette(p, n = NULL)
 }

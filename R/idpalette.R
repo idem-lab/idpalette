@@ -1,3 +1,5 @@
+#' @title ID Palette
+#' @description
 #' Create colour palettes based on IDEM, IDDU, and ACEFA colours
 #'
 #' @param p `character`. Which palette? See `?idpal` for details.
@@ -36,6 +38,61 @@ idpalette <- function(
 
   }
 
+}
+
+
+#' @title IDEM palette
+#' @description
+#' An alias for `idpalette(p = "idem", n)`
+#'
+#' @param n `numeric`. How many colours?
+#'
+#' @return `character` of length `n`
+#' @export
+#'
+#' @examples
+#' idem(7)
+idem <- function(n = NULL){
+  idpalette(
+    p = "idem",
+    n = n
+  )
+}
+
+#' @title IDDU palette
+#' @description
+#' An alias for `idpalette(p = "iddu", n)`
+#'
+#' @param n `numeric`. How many colours?
+#'
+#' @return `character` of length `n`
+#' @export
+#'
+#' @examples
+#' iddu(5)
+iddu <- function(n = NULL){
+  idpalette(
+    p = "iddu",
+    n = n
+  )
+}
+
+#' @title ACEFA palette
+#' @description
+#' An alias for `idpalette(p = "acefa", n)`
+#'
+#' @param n `numeric`. How many colours?
+#'
+#' @return `character` of length `n`
+#' @export
+#'
+#' @examples
+#' acefa(5)
+acefa <- function(n = NULL){
+  idpalette(
+    p = "acefa",
+    n = n
+  )
 }
 
 #' @export
