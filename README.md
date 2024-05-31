@@ -3,10 +3,15 @@
 
 # idpalette
 
-<!-- badges: start -->
-<!-- badges: end -->
+Palettes based on the colour schemes for
+[IDEM](https://www.telethonkids.org.au/our-research/brain-and-behaviour/child-health-analytics-research-program/infectious-disease-ecology-and-modelling/),
+[IDDU](https://mspgh.unimelb.edu.au/research-groups/centre-for-epidemiology-and-biostatistics-research/infectious-disease-dynamics),
+and [ACEFA](https://acefa-hubs.github.io)
 
-COLOURS FOR EVERYONE *in IDEM, IDDU, ACEFA*
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/idem-lab/idpalette/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/idem-lab/idpalette/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 ## Installation
 
@@ -17,6 +22,24 @@ You can install the development version of idpalette from
 # install.packages("devtools")
 devtools::install_github("idem-lab/idpalette")
 ```
+
+## Using `idpalette`
+
+The function `idpalette` takes arguments:
+
+- `p`, the palette, i.e., `"idem"`, `"iddu"`, or `"acefa"`, and
+- `n`, number of colours needed.
+
+These can also be accessed by alias functions for each palette:
+`idem(n)`, `iddu(n)`, and `acefa(n)`
+
+If `n` is not specified, the default is the number of colours in the
+true base palette, i.e., 7 for IDEM, and 5 for IDDU and ACEFA.
+
+Usage per above calls palettes based on the colours in the group logos.
+There are also “official” versions of the palettes, which contain only
+the four colours specifically selected for use by the graphic design
+team.
 
 ## Main colours
 

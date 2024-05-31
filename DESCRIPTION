@@ -1,5 +1,5 @@
 Package: idpalette
-Title: Some palettes for the IDEM, IDDU, and ACEFA groups.
+Title: Some palettes for the IDEM, IDDU, and ACEFA research groups
 Version: 0.0.0.9000
 Authors@R: 
     person("Gerry", "Ryan", , "id@em.com", role = c("aut", "cre"),
