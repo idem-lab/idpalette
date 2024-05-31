@@ -63,19 +63,41 @@ idpalette("acefa_official")
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
-## Your colours your way
+## Alias functions
 
 ``` r
-idpalette("iddu", 20)
+idem()
 ```
 
 <img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
 
 ``` r
-idpalette("acefa", 2)
+iddu()
 ```
 
 <img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+
+``` r
+acefa()
+```
+
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
+
+## Your colours your way
+
+As many or as few colours as you want
+
+``` r
+idpalette("iddu", 20)
+```
+
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
+
+``` r
+idpalette("acefa", 2)
+```
+
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
 
 ## Have a go ya mug
 
@@ -94,7 +116,7 @@ ggplot(
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
 
 ``` r
 ggplot(mpg) +
@@ -108,4 +130,4 @@ ggplot(mpg) +
   theme_bw()
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
