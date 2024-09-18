@@ -107,7 +107,7 @@ acefa()
 
 ## Your colours your way
 
-As many or as few colours as you want
+As many or as few colours as you want, forwards or backwards.
 
 ```{r}
 idpalette("iddu", 20)
@@ -116,6 +116,11 @@ idpalette("iddu", 20)
 ```{r}
 idpalette("acefa", 2)
 ```
+
+```{r}
+idem(10, rev = TRUE)
+```
+
 
 ## Have a go ya mug
 
