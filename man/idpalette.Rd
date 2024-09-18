@@ -4,20 +4,30 @@
 \alias{idpalette}
 \title{ID Palette}
 \usage{
-idpalette(p, n = NULL)
+idpalette(p, n = NULL, rev = FALSE)
 }
 \arguments{
 \item{p}{\code{character}. Which palette? See \code{?idpal} for details.}
 
-\item{n}{\code{numeric}. How many colours}
+\item{n}{\code{numeric}. How many colours?}
+
+\item{rev}{\code{logical} Reverse the colour order?}
 }
 \value{
-\code{character} of hex colours length \code{n}
+\code{idpalette} class object of hex colours length \code{n}.
+The \code{idpalette} class has a print method that will plot the colours in the
+object, but it is underneath that a \code{character} string of length \code{n} and can
+be otherwise treated as such.
 }
 \description{
 Create colour palettes based on IDEM, IDDU, and ACEFA colours
 }
 \examples{
 
-idpalette("idem", 20)
+idpalette(
+  "idem",
+  n = 20,
+  rev = TRUE
+)
+
 }

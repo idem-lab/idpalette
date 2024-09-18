@@ -4,16 +4,21 @@
 \alias{acefa}
 \title{ACEFA palette}
 \usage{
-acefa(n = NULL)
+acefa(n = NULL, rev = FALSE)
 }
 \arguments{
 \item{n}{\code{numeric}. How many colours?}
+
+\item{rev}{\code{logical} Reverse the colour order?}
 }
 \value{
-\code{character} of length \code{n}
+\code{idpalette} class object of hex colours length \code{n}.
+The \code{idpalette} class has a print method that will plot the colours in the
+object, but it is underneath that a \code{character} string of length \code{n} and can
+be otherwise treated as such.
 }
 \description{
-An alias for \code{idpalette(p = "acefa", n)}
+An alias for \code{idpalette(p = "acefa", n, rev)}
 }
 \examples{
 acefa(5)

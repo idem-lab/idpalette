@@ -4,16 +4,23 @@
 \alias{idem}
 \title{IDEM palette}
 \usage{
-idem(n = NULL)
+idem(n = NULL, rev = FALSE)
 }
 \arguments{
 \item{n}{\code{numeric}. How many colours?}
+
+\item{rev}{\code{logical} Reverse the colour order?}
 }
 \value{
 \code{character} of length \code{n}
+
+\code{idpalette} class object of hex colours length \code{n}.
+The \code{idpalette} class has a print method that will plot the colours in the
+object, but it is underneath that a \code{character} string of length \code{n} and can
+be otherwise treated as such.
 }
 \description{
-An alias for \code{idpalette(p = "idem", n)}
+An alias for \code{idpalette(p = "idem", n, rev)}
 }
 \examples{
 idem(7)
