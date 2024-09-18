@@ -15,13 +15,20 @@ and [ACEFA](https://acefa-hubs.github.io)
 
 ## Installation
 
-You can install the development version of idpalette from
+You can install the development version of `idpalette` from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("idem-lab/idpalette")
 ```
+
+### Python friend
+
+There is a python version of `idpalette` also on
+[GotHyb](https://github.com/) by Rob Moss:
+
+<https://github.com/robmoss/idpalette>
 
 ## Using `idpalette`
 
