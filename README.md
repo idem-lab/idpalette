@@ -154,3 +154,30 @@ ggplot(mpg) +
 ```
 
 <img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+
+Works with `terra` plotting:
+
+``` r
+library(sdmtools)
+library(terra)
+#> terra 1.7.78
+```
+
+``` r
+
+r <- example_raster(seed = 20240802)
+
+par(mfcol = c(1, 2))
+
+plot(
+  r,
+  col = idem(100)
+)
+
+plot(
+  r,
+  col = idem(100, rev = TRUE)
+)
+```
+
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
