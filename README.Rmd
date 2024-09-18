@@ -138,13 +138,25 @@ ggplot(mpg) +
   scale_fill_manual(values = idpalette("idem")) +
   theme_bw()
 ```
-```{r}
+
+Works with `terra` plotting:
+
+```{r, fig.height=3}
 library(sdmtools)
-library(tidyterra)
+library(terra)
 
 r <- example_raster(seed = 20240802)
 
-plot(r, col = idem(100))
+par(mfcol = c(1, 2))
 
+plot(
+  r,
+  col = idem(100)
+)
+
+plot(
+  r,
+  col = idem(100, rev = TRUE)
+)
 ```
 
