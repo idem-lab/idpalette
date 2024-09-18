@@ -34,13 +34,21 @@ idpalette <- function(
   }
 
   if(n <= length(pal)){
+
+    idp <- pal[1:n]
+
+    if(rev){
+      idp <- rev(idp)
+    }
+
     return(
       structure(
-        pal[1:n],
+        idp,
         class = "idpalette",
         name = p
       )
     )
+
   } else {
 
     idp <- grDevices::colorRampPalette(pal)(n)
@@ -49,7 +57,11 @@ idpalette <- function(
       idp <- rev(idp)
     }
 
-    structure(idp, class = "idpalette", name = p)
+    structure(
+      idp,
+      class = "idpalette",
+      name = p
+    )
 
   }
 
