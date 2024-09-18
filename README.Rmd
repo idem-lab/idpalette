@@ -138,3 +138,13 @@ ggplot(mpg) +
   scale_fill_manual(values = idpalette("idem")) +
   theme_bw()
 ```
+```{r}
+library(sdmtools)
+library(tidyterra)
+
+r <- example_raster(seed = 20240802)
+
+plot(r, col = idem(100))
+
+```
+
