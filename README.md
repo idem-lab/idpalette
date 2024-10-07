@@ -194,3 +194,27 @@ plot(
 ```
 
 <img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
+
+Sometimes `ggplot2` won’t play nicely being fed a vector of values for
+continuous scales, so `scale_id_continuous` allows `idpalette` or any
+arbitrary vector of colours to be used:
+
+``` r
+library(ggplot2)
+
+ggplot(mtcars) +
+ geom_point(
+   aes(
+     x = disp,
+     y = hp,
+     colour = qsec
+   ),
+   size = 5
+ ) +
+ scale_id_continuous(
+   cols = iddu(),
+   aesthetics = "colour"
+ )
+```
+
+<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
