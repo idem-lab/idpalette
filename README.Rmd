@@ -153,7 +153,7 @@ ggplot(mpg) +
 
 Works with `terra` plotting:
 
-```{r, fig.height=3}
+```{r, fig.height=4}
 library(sdmtools)
 library(terra)
 
@@ -170,5 +170,26 @@ plot(
   r,
   col = idem(100, rev = TRUE)
 )
+```
+
+Sometimes `ggplot2` won't play nicely being fed a vector of values for
+continuous scales, so `scale_id_continuous` allows `idpalette` or any arbitrary
+vector of colours to be used:
+```{r, fig.height= 4}
+library(ggplot2)
+
+ggplot(mtcars) +
+ geom_point(
+   aes(
+     x = disp,
+     y = hp,
+     colour = qsec
+   ),
+   size = 5
+ ) +
+ scale_id_continuous(
+   cols = iddu(),
+   aesthetics = "colour"
+ )
 ```
 
