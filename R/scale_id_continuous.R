@@ -31,7 +31,8 @@
 scale_id_continuous <- function(
   cols,
   aesthetics = c("fill", "colour"),
-  na.value = "transparent"
+  na.value = "transparent",
+  guide = "colourbar"
 ){
 
   aesthetics <- match.arg(aesthetics)
@@ -44,7 +45,7 @@ scale_id_continuous <- function(
       space = "Lab"
     ),
     na.value = na.value,
-    guide = "colourbar",
+    guide = guide
   )
 
 }
