@@ -6,6 +6,7 @@
 #' @param cols `character`. A vector of colours
 #' @param aesthetics Scale aesthetic.
 #' @param na.value Garn - whaddaya want in the `NA`s?
+#' @param guide A function used to create a guide or its name. See [`ggplot2::guides()`] for more information
 #'
 #' @return A `ggproto` object of class `Scale` and `ScaleContinuous`
 #' @export

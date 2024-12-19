@@ -7,7 +7,8 @@
 scale_id_continuous(
   cols,
   aesthetics = c("fill", "colour"),
-  na.value = "transparent"
+  na.value = "transparent",
+  guide = "colourbar"
 )
 }
 \arguments{
@@ -16,6 +17,8 @@ scale_id_continuous(
 \item{aesthetics}{Scale aesthetic.}
 
 \item{na.value}{Garn - whaddaya want in the \code{NA}s?}
+
+\item{guide}{A function used to create a guide or its name. See \code{\link[ggplot2:guides]{ggplot2::guides()}} for more information}
 }
 \value{
 A \code{ggproto} object of class \code{Scale} and \code{ScaleContinuous}
