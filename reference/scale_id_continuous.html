@@ -46,7 +46,8 @@ or colour scale</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">scale_id_continuous</span><span class="op">(</span></span>
 <span>  <span class="va">cols</span>,</span>
 <span>  aesthetics <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"fill"</span>, <span class="st">"colour"</span><span class="op">)</span>,</span>
-<span>  na.value <span class="op">=</span> <span class="st">"transparent"</span></span>
+<span>  na.value <span class="op">=</span> <span class="st">"transparent"</span>,</span>
+<span>  guide <span class="op">=</span> <span class="st">"colourbar"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -64,6 +65,10 @@ or colour scale</p>
 
 <dt id="arg-na-value">na.value<a class="anchor" aria-label="anchor" href="#arg-na-value"></a></dt>
 <dd><p>Garn - whaddaya want in the <code>NA</code>s?</p></dd>
+
+
+<dt id="arg-guide">guide<a class="anchor" aria-label="anchor" href="#arg-guide"></a></dt>
+<dd><p>A function used to create a guide or its name. See <code><a href="https://ggplot2.tidyverse.org/reference/guides.html" class="external-link">ggplot2::guides()</a></code> for more information</p></dd>
 
 </dl></div>
     <div class="section level2">
