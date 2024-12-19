@@ -11,6 +11,8 @@ and [ACEFA](https://acefa-hubs.github.io)
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/idem-lab/idpalette/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/idem-lab/idpalette/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/idem-lab/idpalette/graph/badge.svg)](https://app.codecov.io/gh/idem-lab/idpalette)
 <!-- badges: end -->
 
 ## Installation
@@ -173,10 +175,7 @@ Works with `terra` plotting:
 ``` r
 library(sdmtools)
 library(terra)
-#> terra 1.7.78
-```
-
-``` r
+#> terra 1.8.5
 
 r <- example_raster(seed = 20240802)
 

@@ -7,6 +7,13 @@
 \description{
 What the package does (one paragraph).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://idem-lab.github.io/idpalette/}
+}
+
+}
 \author{
 \strong{Maintainer}: Gerry Ryan \email{id@em.com} (\href{https://orcid.org/0000-0003-0183-7630}{ORCID})
 
