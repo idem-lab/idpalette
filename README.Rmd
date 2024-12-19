@@ -22,6 +22,7 @@ Palettes based on the colour schemes for [IDEM](https://www.telethonkids.org.au/
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/idem-lab/idpalette/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/idem-lab/idpalette/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/idem-lab/idpalette/graph/badge.svg)](https://app.codecov.io/gh/idem-lab/idpalette)
 <!-- badges: end -->
 
 
