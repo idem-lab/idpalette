@@ -5,12 +5,14 @@
 \alias{idpalette-package}
 \title{idpalette: Some palettes for the IDEM, IDDU, ACEFA, and The Kids}
 \description{
-If you didn't get it from the title I can't help you.
+See: package title.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://idem-lab.github.io/idpalette/}
+  \item \url{https://github.com/idem-lab/idpalette}
+  \item Report bugs at \url{https://github.com/idem-lab/idpalette/issues}
 }
 
 }
