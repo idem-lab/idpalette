@@ -4,9 +4,10 @@
 # idpalette
 
 Palettes based on the colour schemes for
-[IDEM](https://www.telethonkids.org.au/our-research/brain-and-behaviour/child-health-analytics-research-program/infectious-disease-ecology-and-modelling/),
+[IDEM](https://www.thekids.org.au/our-research/infectious-diseases/infectious-disease-ecology-and-modelling/),
 [IDDU](https://mspgh.unimelb.edu.au/research-groups/centre-for-epidemiology-and-biostatistics-research/infectious-disease-dynamics),
-and [ACEFA](https://acefa-hubs.github.io)
+[ACEFA](https://acefa-hubs.github.io), and [The Kids Research Institute
+Australia](https://www.thekids.org.au/)
 
 <!-- badges: start -->
 
@@ -14,6 +15,29 @@ and [ACEFA](https://acefa-hubs.github.io)
 [![Codecov test
 coverage](https://codecov.io/gh/idem-lab/idpalette/graph/badge.svg)](https://app.codecov.io/gh/idem-lab/idpalette)
 <!-- badges: end -->
+
+## `idpalette` does two things
+
+- provides functions for colour palettes based on IDEM, IDDU, ACEFA, and
+  The Kids, and
+- provides a `scale` function that allows the use of these or any color
+  palette with `ggplot2` continuous scales.
+
+### Palettes
+
+For a palette of `n` colours, call: `idem(n)`,`iddu(n)`, `acefa(n)`, or
+`thekids(n)`
+
+A wider range of slightly differing palettes available via `idpalette`,
+see `?idpal` for details.
+
+### `ggplot2` scale
+
+`ggplot2` does not like it when you specify an arbitrary vector of
+colours to a continuous scale. `scale_id_continous` allows you to pass
+any vector of colours, either as an `idpalette` palette, another
+palette, or a character vector of whatever god-awful unicorn vomitus
+suits your whimsy of the moment.
 
 ## Installation
 
@@ -25,38 +49,18 @@ You can install the development version of `idpalette` from
 devtools::install_github("idem-lab/idpalette")
 ```
 
-### Python friend
+#### Python friend
 
-There is a python version of `idpalette` also on
-[GotHyb](https://github.com/) by Rob Moss:
-
+Python version of `idpalette` by Rob Moss:
 <https://github.com/robmoss/idpalette>
 
-## Using `idpalette`
-
-The function `idpalette` takes arguments:
-
-- `p`, the palette, i.e., `"idem"`, `"iddu"`, or `"acefa"`, and
-- `n`, number of colours needed.
-
-These can also be accessed by alias functions for each palette:
-`idem(n)`, `iddu(n)`, and `acefa(n)`
-
-If `n` is not specified, the default is the number of colours in the
-true base palette, i.e., 7 for IDEM, and 5 for IDDU and ACEFA.
-
-Usage per above calls palettes based on the colours in the group logos.
-There are also “official” versions of the palettes, which contain only
-the four colours specifically selected for use by the graphic design
-team.
-
-## Main colours
+## Palettes
 
 ### IDEM
 
 ``` r
 library(idpalette)
-idpalette("idem")
+idem()  # alias for idpalette("idem")
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
@@ -70,7 +74,7 @@ idpalette("idem_official")
 ### IDDU
 
 ``` r
-idpalette("iddu")
+iddu()  # alias for idpalette("iddu")
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
@@ -84,7 +88,7 @@ idpalette("iddu_official")
 ### ACEFA
 
 ``` r
-idpalette("acefa")
+acefa() # alias for idpalette("acefa")
 ```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
@@ -95,22 +99,22 @@ idpalette("acefa_official")
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
-## Alias functions
+### The Kids
 
 ``` r
-idem()
+thekids() # alias for idpalette("thekids")
 ```
 
 <img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
 
 ``` r
-iddu()
+idpalette("thekids_official")
 ```
 
 <img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
 
 ``` r
-acefa()
+idpalette("thekids_diverging")
 ```
 
 <img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
@@ -137,6 +141,61 @@ idem(10, rev = TRUE)
 
 <img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
 
+## Deal with `ggplot2`’s objections.
+
+Sometimes `ggplot2` won’t play nicely being fed a vector of values for
+vector of colours to be used in continuous scales.
+
+`scale_id_continuous` allows `idpalette` or any arbitrary vector of
+colours to be converted into a continuous palette:
+
+``` r
+library(ggplot2)
+
+ggplot(mtcars) +
+ geom_point(
+   aes(
+     x = disp,
+     y = hp,
+     colour = qsec
+   ),
+   size = 5
+ ) +
+ # usual approach to alter colours:
+ # scale_fill_continuous(
+ #   palette = iddu()
+ # ) # but not allowed: Cannot convert `x` to a continuous palette.
+ # instead we use `scale_id_continuous`:
+ scale_id_continuous(
+   cols = iddu(),
+   aesthetics = "colour"
+ )
+```
+
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+
+With your own wonderful colour scheme
+
+``` r
+my_wonderful_colour_scheme <- c("brown4", "magenta", "grey80", "salmon", "gold")
+
+ggplot(mtcars) +
+ geom_point(
+   aes(
+     x = disp,
+     y = hp,
+     colour = qsec
+   ),
+   size = 5
+ ) +
+ scale_id_continuous(
+   cols = my_wonderful_colour_scheme,
+   aesthetics = "colour"
+ )
+```
+
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
+
 ## Have a go ya mug
 
 ``` r
@@ -154,7 +213,7 @@ ggplot(
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
 
 ``` r
 ggplot(mpg) +
@@ -164,18 +223,18 @@ ggplot(mpg) +
       fill = class
     )
   ) +
-  scale_fill_manual(values = idpalette("idem")) +
+  scale_fill_manual(values = idem()) +
   theme_bw()
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
 
-Works with `terra` plotting:
+With `terra`:
 
 ``` r
 library(sdmtools)
 library(terra)
-#> terra 1.8.5
+#> terra 1.8.60
 
 r <- example_raster(seed = 20240802)
 
@@ -183,37 +242,13 @@ par(mfcol = c(1, 2))
 
 plot(
   r,
-  col = idem(100)
+  col = thekids(100)
 )
 
 plot(
   r,
-  col = idem(100, rev = TRUE)
+  col = thekids(100, rev = TRUE)
 )
 ```
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
-
-Sometimes `ggplot2` won’t play nicely being fed a vector of values for
-continuous scales, so `scale_id_continuous` allows `idpalette` or any
-arbitrary vector of colours to be used:
-
-``` r
-library(ggplot2)
-
-ggplot(mtcars) +
- geom_point(
-   aes(
-     x = disp,
-     y = hp,
-     colour = qsec
-   ),
-   size = 5
- ) +
- scale_id_continuous(
-   cols = iddu(),
-   aesthetics = "colour"
- )
-```
-
-<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-18-1.png" width="100%" />
