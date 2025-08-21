@@ -2,9 +2,12 @@
 % Please edit documentation in R/idpal.R
 \name{idpal}
 \alias{idpal}
-\title{Base colour palettes for IDEM, IDDU, and ACEFA}
+\title{Colour palettes for IDEM, IDDU, ACEFA, and The Kids}
 \usage{
-idpal(p = c("idem", "iddu", "acefa", "acefa_pink", "idem_official"))
+idpal(
+  p = c("idem", "idem_official", "iddu", "iddu_official", "acefa", "acefa_official",
+    "thekids", "thekids_official", "thekids_diverging")
+)
 }
 \arguments{
 \item{p}{\code{character}. Which palette do you want?}
@@ -13,15 +16,20 @@ idpal(p = c("idem", "iddu", "acefa", "acefa_pink", "idem_official"))
 \code{character} of hex values
 }
 \description{
-Base colour palettes for IDEM, IDDU, and ACEFA
+Colour palettes for IDEM, IDDU, ACEFA, and The Kids
 }
 \details{
 \code{"idem"}, \code{"iddu"}, and \code{"acefa"} return palettes for all colours in logos.
 \code{"..._official"} palettes return only the four-colour palettes per the style-
 guide from the designer.
 
-NB: These 'non-official' colours are estimated by a colour dropper thing
-Gerry found on the internet and may or may not be exacty correct.
+\code{"thekids"} returns colours from the brand template, excluding black and
+white. \code{"_official"} includes black and white, while \code{"_diverging"} includes
+white, but excludes dark teal, midnight blue, and black, for use in
+diverging colour schemes (duh)
+
+NB: The additional IDEM, IDDU 'non-official' colours are estimated by a colour dropper thing
+Gerry found on the internet and may or may not be exactly correct.
 }
 \examples{
 

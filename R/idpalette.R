@@ -1,6 +1,7 @@
 #' @title ID Palette
 #' @description
-#' Create colour palettes based on IDEM, IDDU, and ACEFA colours
+#' Create colour palettes based on IDEM, IDDU, ACEFA, and The Kids Research
+#' Institute Australia colours
 #'
 #' @param p `character`. Which palette? See `?idpal` for details.
 #' @param n `numeric`. How many colours?
@@ -20,6 +21,16 @@
 #'   n = 20,
 #'   rev = TRUE
 #' )
+#'
+#' kids_div <- idpalette(
+#'    "thekids_diverging"
+#' )
+#'
+#' kids_div
+#'
+#' str(kids_div)
+#'
+#' is.character(kids_div)
 #'
 idpalette <- function(
     p,
@@ -148,6 +159,33 @@ acefa <- function(
     rev = rev
   )
 }
+
+#' @title The Kids palette
+#' @description
+#' An alias for `idpalette(p = "thekids", n, rev)`
+#'
+#' @param n `numeric`. How many colours?
+#' @param rev `logical` Reverse the colour order?
+#'
+#' @return `idpalette` class object of hex colours length `n`.
+#' The `idpalette` class has a print method that will plot the colours in the
+#' object, but it is underneath that a `character` string of length `n` and can
+#' be otherwise treated as such.
+#' @export
+#'
+#' @examples
+#' thekids(8)
+thekids <- function(
+    n = NULL,
+    rev = FALSE
+){
+  idpalette(
+    p = "thekids",
+    n = n,
+    rev = rev
+  )
+}
+
 
 #' @export
 #' @importFrom graphics rect par image text

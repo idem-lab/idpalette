@@ -35,5 +35,10 @@ test_that(
       idpalette("idem"),
       idem()
     )
+
+    expect_equal(
+      idpalette("thekids"),
+      thekids()
+    )
   }
 )
