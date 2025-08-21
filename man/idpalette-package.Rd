@@ -3,9 +3,9 @@
 \docType{package}
 \name{idpalette-package}
 \alias{idpalette-package}
-\title{idpalette: Some palettes for the IDEM, IDDU, and ACEFA research groups}
+\title{idpalette: Some palettes for the IDEM, IDDU, ACEFA, and The Kids}
 \description{
-What the package does (one paragraph).
+If you didn't get it from the title I can't help you.
 }
 \seealso{
 Useful links:
