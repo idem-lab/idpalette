@@ -1,5 +1,5 @@
 Package: idpalette
-Title: Some palettes for the IDEM, IDDU, ACEFA, and The Kids
+Title: Palettes for IDEM, IDDU, ACEFA, and The Kids
 Version: 2.0.0
 Authors@R: 
     person("Gerry", "Ryan", , "id@em.com", role = c("aut", "cre"),

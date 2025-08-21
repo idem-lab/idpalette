@@ -3,7 +3,7 @@
 \docType{package}
 \name{idpalette-package}
 \alias{idpalette-package}
-\title{idpalette: Some palettes for the IDEM, IDDU, ACEFA, and The Kids}
+\title{idpalette: Palettes for IDEM, IDDU, ACEFA, and The Kids}
 \description{
 See: package title.
 }
