@@ -7,6 +7,7 @@
 #' @param aesthetics Scale aesthetic.
 #' @param na.value Garn - whaddaya want in the `NA`s?
 #' @param guide A function used to create a guide or its name. See [`ggplot2::guides()`] for more information
+#' @param ... Arguments passed on to `ggplot2::continuous_scale`
 #'
 #' @return A `ggproto` object of class `Scale` and `ScaleContinuous`
 #' @export
@@ -33,7 +34,8 @@ scale_id_continuous <- function(
   cols,
   aesthetics = c("fill", "colour"),
   na.value = "transparent",
-  guide = "colourbar"
+  guide = "colourbar",
+  ...
 ){
 
   aesthetics <- match.arg(aesthetics)
@@ -46,7 +48,8 @@ scale_id_continuous <- function(
       space = "Lab"
     ),
     na.value = na.value,
-    guide = guide
+    guide = guide,
+    ...
   )
 
 }
